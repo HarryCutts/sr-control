@@ -31,6 +31,8 @@ class IOPanel(Table):
         self.outputs[num].set_value(value)
         self.board.output[num].d = value
 
+        self.outputs[num].queue_draw()
+
     ## Event handlers ##
 
     def key_press(self, widget, event):
